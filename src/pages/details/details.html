@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Rando Auvergne
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Détail de {{ rando.title }}</h1>
+
+  <button (click)="showDetails(rando)">
+        Start
+  </button>
+
+  <h2>Etapes</h2>
+  <ion-list>
+    <ion-item *ngFor="let step of rando.steps">
+      {{ step.lat }} - {{ step.lng }}
+    </ion-item>
+  </ion-list>
+
+  <button (click)="showDetails(rando)">
+        Start
+  </button>
+</ion-content>
